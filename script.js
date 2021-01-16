@@ -64,12 +64,12 @@ function SearchWeather(city) {
                
                 let CTodayUnixTime = Cresponse.daily[i].dt;
                 let CTodaysDate = new Date(CTodayUnixTime*1000);
-                let CcityDate = $('<h5 class="col-md-2 fday" id=fd'+[i]).text(CTodaysDate.toLocaleDateString("en-US"));
+                let CcityDate = $("<h5>").addClass("col-md-2 fday").text(CTodaysDate.toLocaleDateString("en-US"));
                 $("#5day").append(CcityDate);//, "<hr>"
                 let Ctemp =$("<p>").text("Temperature High/Low : "+Cresponse.daily[i].temp.max+"°F / "+Cresponse.daily[i].temp.min+"°F");
                 let Chumidity=$("<p>").text("Humidity: "+Cresponse.daily[i].humidity+"%");
                                
-                $("#fd"+[i]).append(Ctemp, Chumidity);//, "<hr>"
+                $(".fday").append(Ctemp, Chumidity);//, "<hr>"
     
 
 
