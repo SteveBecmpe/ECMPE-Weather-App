@@ -54,23 +54,12 @@ function SearchWeather(city) {
                     <p>Temp High/Low: ${Cresponse.daily[0].temp.max}°F / ${Cresponse.daily[0].temp.min}°F</p>
                     <p>Humidity: ${Cresponse.daily[0].humidity}%</p>
                     <p>Wind Speed: ${Cresponse.daily[0].wind_speed}MPH</p>
-                    <p id="UV-Index">UV Index: ${Cresponse.daily[0].uvi}</p>
+                    <p id="UV-Index">UV Index: <span id="uvic">${Cresponse.daily[0].uvi}</span></p>
                 </div>
             `);
             $("#today").append(tempDailyHTML);
-            let UVI = Cresponse.daily[0].uvi
+            let UVI = Cresponse.daily[0].uvi;
 
-            if(UVI < 3){
-                console.log("make UVI color green");
-            }else if(UVI>=3 && UVI<=5){
-                console.log("make UVI color yellow");
-            }else if(UVI >= 6 && UVI <=7){
-                console.log("make UVI color orange");
-            }else if(UVI >= 8 && UVI <= 10){
-                console.log("make UVI color red");
-            }else if(UVI >= 11){
-                console.log("make UVI color purple");
-            }
 
             // let cityDate = $("<h3>").addClass("city-date").text(city + " " + TodaysDate.toLocaleDateString("en-US"));
             // let temp = $("<p>").text("Temperature High/Low : " + Cresponse.daily[0].temp.max + "°F / " + Cresponse.daily[0].temp.min + "°F");
@@ -83,7 +72,7 @@ function SearchWeather(city) {
             // $(".forecast").html("");
             // $("#5day").empty();
             $("#5day").html("").text("5-Day Forecast:");
-            $("#5day").append('<div class="row forecast h5"></div>');//, "<hr>"
+            $("#5day").append('<div class="row forecast"></div>');//, "<hr>"
 
             for (let i = 1; i < 6; i++) {
                 //render 5 day forcast day by day.. forcast day render call 
@@ -95,10 +84,10 @@ function SearchWeather(city) {
 
                 // $(".forecast").append(' <div class="col-md-2 fday h6">' + CTodaysDate.toLocaleDateString("en-US") + '<p class="h6">icon</p><p>' + "Temp: " + Cresponse.daily[i].temp.max + "°F"+ '</p><p class="h6">' + Cresponse.daily[i].humidity + "%" + '</p></div>');//, "<hr>"
                 let tempHTML = $(`
-                    <div class="col-md-2 fday h6">${CTodaysDate.toLocaleDateString("en-US")} 
-                        <img src="http://openweathermap.org/img/wn/${Cresponse.daily[i].weather[0].icon}@2x.png"></img>
-                        <p>Temp: ${Cresponse.daily[i].temp.max}°F</p>
-                        <p class="h6">${Cresponse.daily[i].humidity}%</p>
+                    <div class="col-md-2 fday">${CTodaysDate.toLocaleDateString("en-US")} 
+                        <img class="pfday" src="http://openweathermap.org/img/wn/${Cresponse.daily[i].weather[0].icon}@2x.png"></img>
+                        <p class="pfday">Temp: ${Cresponse.daily[i].temp.max}°F</p>
+                        <p class="pfday">Humidity: ${Cresponse.daily[i].humidity}%</p>
                     </div>
                     `);
                 $(".forecast").append(tempHTML);
@@ -123,6 +112,24 @@ function SearchWeather(city) {
 
 
             };
+
+            
+            if(UVI < 3){
+                console.log("make UVI color green");
+                $("#uvic").addClass("uvGreen");
+            }else if(UVI>=3 && UVI<=5){
+                console.log("make UVI color yellow");
+                $("#uvic").addClass("uvYellow");
+            }else if(UVI >= 6 && UVI <=7){
+                console.log("make UVI color orange");
+                $("#uvic").addClass("uvOrange");
+            }else if(UVI >= 8 && UVI <= 10){
+                console.log("make UVI color red");
+                $("#uvic").addClass("uvRed");
+            }else if(UVI >= 11){
+                console.log("make UVI color purple");
+                $("#uvic").addClass("uvPurple");
+            }
 
 
         });
