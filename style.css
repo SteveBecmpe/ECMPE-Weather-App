@@ -5,3 +5,24 @@ header{
     
 
 }
+
+.forecast{
+    margin-left: 5px;
+}
+
+.Today-Current{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: darkgray;
+    margin: 5px;
+    height: 300px;
+}
+
+.fday {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(9, 146, 209);
+    margin: 2px;
+    background-color: rgb(9, 146, 209);
+    
+}

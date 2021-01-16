@@ -2,27 +2,28 @@
 //get serach word
 $("#searchButtonGo").on("click", function (event) {
     let city = $("#searchCityInput").val();
-    console.log(city);
-    // This is our API key. Add your own API key between the ""
-    let APIKey = "&appid=82114df2c2bee6b435a6e4366b8f4bdc";
-    let NumOfDays = "&cnt=5";
-
-    let baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";//Current Weather Call
-    // let baseURL = "https://api.openweathermap.org/data/2.5/forecast?q=";
-    // let baseURL = "https://api.openweathermap.org/data/2.5/forecast/daily?id=";
-
-    // Here we are building the URL we need to query the database
-    let searchURL = baseURL + city + NumOfDays + APIKey;
-    console.log(searchURL);
-    SearchWeather(searchURL, city);
+    console.log(city); 
+    SearchWeather(city);
 });
 
 
 // We then created an AJAX call
 
-function SearchWeather(queryURL, city) {
+function SearchWeather(city) {
+       // This is our API key. Add your own API key between the ""
+       let APIKey = "&appid=82114df2c2bee6b435a6e4366b8f4bdc";
+       let NumOfDays = "&cnt=5";
+   
+       let baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";//Current Weather Call
+       // let baseURL = "https://api.openweathermap.org/data/2.5/forecast?q=";
+       // let baseURL = "https://api.openweathermap.org/data/2.5/forecast/daily?id=";
+   
+       // Here we are building the URL we need to query the database
+       let searchURL = baseURL + city + NumOfDays + APIKey;
+       console.log(searchURL);
+       
     $.ajax({
-        url: queryURL,
+        url: searchURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
@@ -55,31 +56,29 @@ function SearchWeather(queryURL, city) {
             let temp =$("<p>").text("Temperature High/Low : "+Cresponse.daily[0].temp.max+"°F / "+Cresponse.daily[0].temp.min+"°F");
             let humidity=$("<p>").text("Humidity: "+Cresponse.daily[0].humidity+"%");
             let windspeed=$("<p>").text("Wind Speed: "+Cresponse.daily[0].wind_speed+"MPH");
-            let CUVI=$("<p>").addClass("UV-Index").text(Cresponse.daily[0].uvi);
-            $("#today").append(cityDate, temp, humidity, windspeed, CUVI, "<hr>");
+            let CUVI=$("<p>").addClass("UV-Index").text("UV Index: " + Cresponse.daily[0].uvi);
+            $("#today").append(cityDate, temp, humidity, windspeed, CUVI);//, "<hr>"
 
             for (let i = 0; i < 8; i++) {
                 //render 5 day forcast day by day.. forcast day render call 
-                let tempTime = Cresponse.daily[i].dt;//unix time
-                let tempDate = new Date(tempTime*1000);
-                // let tempTime = Date(Cresponse.daily[i].dt);
-                // let tempDate = tempTime.toString();
-                console.log(tempDate.toLocaleDateString("en-US") + " UV index " +Cresponse.daily[i].uvi );
+               
+                let CTodayUnixTime = Cresponse.daily[i].dt;
+                let CTodaysDate = new Date(CTodayUnixTime*1000);
+                let CcityDate = $('<h5 class="col-md-2 fday" id=fd'+[i]).text(CTodaysDate.toLocaleDateString("en-US"));
+                $("#5day").append(CcityDate);//, "<hr>"
+                let Ctemp =$("<p>").text("Temperature High/Low : "+Cresponse.daily[i].temp.max+"°F / "+Cresponse.daily[i].temp.min+"°F");
+                let Chumidity=$("<p>").text("Humidity: "+Cresponse.daily[i].humidity+"%");
+                               
+                $("#fd"+[i]).append(Ctemp, Chumidity);//, "<hr>"
+    
+
+
+
+
+
+
             };
-            // let degreesC = response.main.temp - 273.15;
-            // console.log(degreesC);
-            // let degreesF = (response.main.temp - 273.15) * 1.80 + 32
-            // console.log(degreesF);
-
-            // $(".temp").html(degreesC.toFixed(2) + "°C / " + degreesF.toFixed(2) + "°F");
-
-
-            // let windSPD = response.wind.speed.toFixed(2);
-            // let windDir = response.wind.deg.toFixed(2);
-            // $('.wind').html(windSPD + " Wind Speed / " + windDir + " Direction");
-
-            // let humidity = response.main.humidity;
-            // $('.humidity').html(humidity + " %");
+      
 
         });
     });
