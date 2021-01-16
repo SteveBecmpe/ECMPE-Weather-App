@@ -1,15 +1,19 @@
 # Project Weather Dashboard APP
 
 - [X] build skeleton html
-- [] Style html so it looks good
-- [] build botton listener for search button
-- [] build function to load search work into local history. check to make sure it doesn't already exist. 
+- [X] Style html so it looks good
+- [X] build botton listener for search button
+- [X] build function to load search work into local history. check to make sure it doesn't already exist. 
+- [ ] build local storage save and search load.. ie. when they search it pushes to array and saves
+- [ ] build last search item on page load. on page load if local is != null load  last element in array
+- [ ] build icons. requires building urls to images on weather webpage and using them as src=
 
-
+- [ ] finish read me
+- [ ] publish repo
 
 # Images are below this line
 
-![First html render] (./Assets/FirstHtmlRender.JPG)
+![First html render](./Assets/FirstHtmlRender.JPG)
 
 
 # Given SOW data is below this line-------------------------------
