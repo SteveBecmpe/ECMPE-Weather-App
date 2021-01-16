@@ -15,7 +15,7 @@ header{
     border-style: solid;
     border-color: darkgray;
     margin: 5px;
-    height: 300px;
+    height: 250px;
 }
 
 .fday {
@@ -25,4 +25,8 @@ header{
     margin: 2px;
     background-color: rgb(9, 146, 209);
     
+}
+
+.h3 {
+    padding-left: 5px;
 }

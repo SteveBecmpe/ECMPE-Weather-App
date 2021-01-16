@@ -59,20 +59,24 @@ function SearchWeather(city) {
             let CUVI = $("<p>").addClass("UV-Index").text("UV Index: " + Cresponse.daily[0].uvi);
             $("#today").append(cityDate, temp, humidity, windspeed, CUVI);//, "<hr>"
 
-            $("#5day").append('<div class="row forecast"></div>');//, "<hr>"
+            // $("#5day").append('<div class="row forecast h5"></div>');//, "<hr>"
+            // $(".forecast").html("");
+            // $("#5day").empty();
+            $("#5day").html("").text("5-Day Forecast:");
+            $("#5day").append('<div class="row forecast h5"></div>');//, "<hr>"
 
             for (let i = 1; i < 6; i++) {
                 //render 5 day forcast day by day.. forcast day render call 
 
                 let CTodayUnixTime = Cresponse.daily[i].dt;
                 let CTodaysDate = new Date(CTodayUnixTime * 1000);
-               
+                
                 // let CcityDate = $("<h5>").addClass("col-md-2 fday").text(CTodaysDate.toLocaleDateString("en-US"));
                 // $("#5day").append(CcityDate);//, "<hr>"
                 // let Ctemp = $("<p>").text("Temperature High/Low : " + Cresponse.daily[i].temp.max + "°F / " + Cresponse.daily[i].temp.min + "°F");
                 // let Chumidity = $("<p>").text("Humidity: " + Cresponse.daily[i].humidity + "%");
 
-                $(".forecast").append(' <div class="col-md-2 fday">' + CTodaysDate.toLocaleDateString("en-US") + '<p>icon</p><p>' + "Temperature High/Low : " + Cresponse.daily[i].temp.max + "°F / " + Cresponse.daily[i].temp.min + "°F" + '</p><p>' + Cresponse.daily[i].humidity + "%" + '</p></div>');//, "<hr>"
+                $(".forecast").append(' <div class="col-md-2 fday h6">' + CTodaysDate.toLocaleDateString("en-US") + '<p class="h6">icon</p><p>' + "Temp: " + Cresponse.daily[i].temp.max + "°F"+ '</p><p class="h6">' + Cresponse.daily[i].humidity + "%" + '</p></div>');//, "<hr>"
 
 
 
