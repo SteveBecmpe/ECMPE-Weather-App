@@ -2,6 +2,7 @@
 //get serach word
 $("#searchButtonGo").on("click", function (event) {
     let city = $("#searchCityInput").val();
+    $("#searchCityInput").val("");
     console.log(city);
     SearchWeather(city);
 });
