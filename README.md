@@ -2,6 +2,7 @@
 I reused this code because it works.. why not.. only issue is that if your system still has it saved it may load the history list with [object][object]
 I didn't notice this until after everything was done and loaded to github.. Defintely something work on in the future..
 
+I had a great time working on this project and it is perfectly in line with our current group project so that is great. I am getting much better at this and love working with the rest of the class. Solving problems together is much easier and we learn from each other when we help teach each other. 
 
 # Project Weather Dashboard APP
 
@@ -30,27 +31,37 @@ when i reload the page it should load with the last city i searched
 
 
 # Images are below this line
-
+This is the first html content. all hard coded.
 ![First html render](./Assets/FirstHtmlRender.JPG)
 
+This is the first object returned from the AJAX call to the weather api.
 ![First ajax object return](./Assets/FirstAJAXresponse.JPG)
 
+This is the first ONECALL with time converted from unix to normal and outputing the uv index
 ![switch to onecall ajax with uvi](./Assets/AjaxOneCallwithUVI.JPG)
 
+This is the first dynamic render of the current day weather.
 ![First Current weather render](./Assets/FirstCurrentDayRender.JPG)
 
+This is the 5 day forecast hard code html before converting it to dynamic render.
 ![more formating getting ready for 5 day](./Assets/AfterCurRenderB45day.JPG)
 
+This is the first 5 day forecast dynamic render. icon place holder.
 ![First working 5 day render](./Assets/FirstWokingCurand5Day.JPG)
 
+First icons appear.. in the 5 day forecast.. current day comes later.
 ![First icons render in 5day](./Assets/1stIconsIN5dayforecast.JPG)
 
+This is the snip i used to determine what colors to use for the uv index background color. weather channel seems legit.
 ![snip of image off web to reference for uv index colors](./Assets/UVindexColorScheme.JPG)
 
+First console log showing uv index logic works. 
 ![console log confirms uv index logic works](./Assets/UVIiflogicworkingb4colorrender.JPG)
 
+UV index color changes in full effect.. I used cities in florida, michigan, California, etc to check.
 ![UV index color change working](./Assets/UVIcolorChangeComplete.JPG)
 
+Final images showing it in full function running on github
 ![Final version running on git hub](./Assets/FinalRunningOnGitHub.JPG)
 
 
