@@ -32,15 +32,25 @@ when i reload the page it should load with the last city i searched
 # Images are below this line
 
 ![First html render](./Assets/FirstHtmlRender.JPG)
+
 ![First ajax object return](./Assets/FirstAJAXresponse.JPG)
+
 ![switch to onecall ajax with uvi](./Assets/AjaxOneCallwithUVI.JPG)
+
 ![First Current weather render](./Assets/FirstCurrentDayRender.JPG)
+
 ![more formating getting ready for 5 day](./Assets/AfterCurRenderB45day.JPG)
+
 ![First working 5 day render](./Assets/FirstWokingCurand5Day.JPG)
+
 ![First icons render in 5day](./Assets/1stIconsIN5dayforecast.JPG)
+
 ![snip of image off web to reference for uv index colors](./Assets/UVindexColorScheme.JPG)
+
 ![console log confirms uv index logic works](./Assets/UVIiflogicworkingb4colorrender.JPG)
+
 ![UV index color change working](./Assets/UVIcolorChangeComplete.JPG)
+
 ![Final version running on git hub](./Assets/FinalRunningOnGitHub.JPG)
 
 
