@@ -1,19 +1,48 @@
+# NOTE: if you have used my other apps you will need to delete "SavedWorkArray" from local storage before loading this app.
+I reused this code because it works.. why not.. only issue is that if your system still has it saved it may load the history list with [object][object]
+I didn't notice this until after everything was done and loaded to github.. Defintely something work on in the future..
+
+
 # Project Weather Dashboard APP
+
 
 - [X] build skeleton html
 - [X] Style html so it looks good
 - [X] build botton listener for search button
 - [X] build function to load search work into local history. check to make sure it doesn't already exist. 
-- [ ] build local storage save and search load.. ie. when they search it pushes to array and saves
-- [ ] build last search item on page load. on page load if local is != null load  last element in array
-- [ ] build icons. requires building urls to images on weather webpage and using them as src=
+- [X] build local storage save and search load.. ie. when they search it pushes to array and saves
+- [X] build last search item on page load. on page load if local is != null load  last element in array
+- [X] build icons. requires building urls to images on weather webpage and using them as src=
+- [ ] future function, keep track of toggling between search history city and make the last city loaded the one that is loaded when the page is reloaded. not the last one in the array.
+- [ ] future make first letter of multi work citys be capital. currently only the first letter of the first word gets capitalized.
 
-- [ ] finish read me
-- [ ] publish repo
+- [X] finish read me
+- [X] publish repo
+
+# Project scope and function
+as a traveler I need to keep track of the weather and 5 day forecast in as many citys as I want. 
+when i reload the page it should load with the last city i searched
+
+# Unique features
+- the search citys are checked against the existing array. it will only add it if it is a new city.
+- changes the first letter to upper case no matter what.. 
+- clear history function. this resets the array to empty.. this was tricky because it is in the same dom as the array elements and in the beginning that caused issues.
+
 
 # Images are below this line
 
 ![First html render](./Assets/FirstHtmlRender.JPG)
+![First ajax object return](./Assets/FirstAJAXresponse.JPG)
+![switch to onecall ajax with uvi](./Assets/AjaxOneCallwithUVI.JPG)
+![First Current weather render](./Assets/FirstCurrentDayRender.JPG)
+![more formating getting ready for 5 day](./Assets/AfterCurRenderB45day.JPG)
+![First working 5 day render](./Assets/FirstWokingCurand5Day.JPG)
+![First icons render in 5day](./Assets/1stIconsIN5dayforecast.JPG)
+![snip of image off web to reference for uv index colors](./Assets/UVindexColorScheme.JPG)
+![console log confirms uv index logic works](./Assets/UVIiflogicworkingb4colorrender.JPG)
+![UV index color change working](./Assets/UVIcolorChangeComplete.JPG)
+![Final version running on git hub](./Assets/FinalRunningOnGitHub.JPG)
+
 
 
 # Given SOW data is below this line-------------------------------
