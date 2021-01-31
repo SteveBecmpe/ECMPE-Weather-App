@@ -42,37 +42,37 @@ Mobile updates. <br>
 
 ![5 Day forecast](./Assets/MobileVersion2-2-1-30-21.JPG)
 
-This is the first html content. all hard coded.
+This is the first html content. all hard coded. <br>
 ![First html render](./Assets/FirstHtmlRender.JPG)
 
-This is the first object returned from the AJAX call to the weather api.
+This is the first object returned from the AJAX call to the weather api. <br>
 ![First ajax object return](./Assets/FirstAJAXresponse.JPG)
 
-This is the first ONECALL with time converted from unix to normal and outputing the uv index
+This is the first ONECALL with time converted from unix to normal and outputing the uv index <br>
 ![switch to onecall ajax with uvi](./Assets/AjaxOneCallwithUVI.JPG)
 
-This is the first dynamic render of the current day weather.
+This is the first dynamic render of the current day weather. <br>
 ![First Current weather render](./Assets/FirstCurrentDayRender.JPG)
 
-This is the 5 day forecast hard code html before converting it to dynamic render.
+This is the 5 day forecast hard code html before converting it to dynamic render. <br>
 ![more formating getting ready for 5 day](./Assets/AfterCurRenderB45day.JPG)
 
-This is the first 5 day forecast dynamic render. icon place holder.
+This is the first 5 day forecast dynamic render. icon place holder. <br>
 ![First working 5 day render](./Assets/FirstWokingCurand5Day.JPG)
 
-First icons appear.. in the 5 day forecast.. current day comes later.
+First icons appear.. in the 5 day forecast.. current day comes later. <br>
 ![First icons render in 5day](./Assets/1stIconsIN5dayforecast.JPG)
 
-This is the snip i used to determine what colors to use for the uv index background color. weather channel seems legit.
+This is the snip i used to determine what colors to use for the uv index background color. weather channel seems legit. <br>
 ![snip of image off web to reference for uv index colors](./Assets/UVindexColorScheme.JPG)
 
-First console log showing uv index logic works. 
+First console log showing uv index logic works.  <br>
 ![console log confirms uv index logic works](./Assets/UVIiflogicworkingb4colorrender.JPG)
 
-UV index color changes in full effect.. I used cities in florida, michigan, California, etc to check.
+UV index color changes in full effect.. I used cities in florida, michigan, California, etc to check. <br>
 ![UV index color change working](./Assets/UVIcolorChangeComplete.JPG)
 
-Final images showing it in full function running on github
+Final images showing it in full function running on github <br>
 ![Final version running on git hub](./Assets/FinalRunningOnGitHub.JPG)
 
 
