@@ -22,6 +22,7 @@ I had a great time working on this project and it is perfectly in line with our 
 - [ ] Change 5 day forecast to 7 day forecast
 - [ ] History collapse and Hide. This menu can get large if the user adds enought places to save.. 
 - [ ] History delete function. need a way to delete specific locations. in addition to deleting the entire list.
+- [ ] Use font Awesome to make better looking icons.
 
 - [X] finish read me. this is from the first complete... in maintenance/CI mode
 - [X] publish repo
