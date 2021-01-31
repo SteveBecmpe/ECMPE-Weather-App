@@ -17,6 +17,7 @@ header{
     border-color: darkgray;
     margin: 5px;
     height: 300px;
+    font-size: 4vw, 4vw;
 }
 
 .fday {
@@ -31,6 +32,9 @@ header{
 
 .h3 {
     padding-left: 5px;
+    font-size: 7vw, 1vw;
+    max-width: 88%;
+    height: linear;
 }
 
 .pfday{
@@ -104,4 +108,14 @@ aside{
     margin: 2px;
     margin-left: auto;
     display: block;
+}
+
+img {
+    height: linear;
+    max-width: 33%;
+}
+  
+.cap {
+    text-transform: capitalize;
+   
 }

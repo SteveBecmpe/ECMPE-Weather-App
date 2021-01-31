@@ -16,7 +16,7 @@ $(document).ready(function () {//START JS Script after document load and ready--
                     $("#StartSearchHistory").html("");
                     for (let i = 0; i < citySearchHistory.length; i++) {
                         let CurrentSearchHistory = $(`
-                     <ul class="btn block">${citySearchHistory[i]}</ul>
+                     <ul class="btn block cap">${citySearchHistory[i]}</ul>
                      `);
                         $("#StartSearchHistory").append(CurrentSearchHistory);
                     }
@@ -122,7 +122,7 @@ $(document).ready(function () {//START JS Script after document load and ready--
                 let TodaysDate = new Date(TodayUnixTime * 1000);
                 let tempDailyHTML = $(`
                 <div class="col-lg-9" id="WeatherDisplay">
-                    <h3 class="city-date">${city} ${TodaysDate.toLocaleDateString("en-US")} <img src="http://openweathermap.org/img/wn/${Cresponse.daily[0].weather[0].icon}@2x.png"></h3>
+                    <h3 class="city-date cap">${city} ${TodaysDate.toLocaleDateString("en-US")} <img src="http://openweathermap.org/img/wn/${Cresponse.daily[0].weather[0].icon}@2x.png"></h3>
                     <p>Temp High/Low: ${Cresponse.daily[0].temp.max}°F / ${Cresponse.daily[0].temp.min}°F</p>
                     <p>Humidity: ${Cresponse.daily[0].humidity}%</p>
                     <p>Wind Speed: ${Cresponse.daily[0].wind_speed}MPH</p>
