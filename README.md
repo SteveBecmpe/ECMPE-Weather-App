@@ -20,8 +20,10 @@ I had a great time working on this project and it is perfectly in line with our 
 - [ ] Save name of zip code search to favorites. A bigger rewrite because of the way the code is. 
 - [ ] Add min max temp to 5 day forecast
 - [ ] Change 5 day forecast to 7 day forecast
+- [ ] History collapse and Hide. This menu can get large if the user adds enought places to save.. 
+- [ ] History delete function. need a way to delete specific locations. in addition to deleting the entire list.
 
-- [X] finish read me
+- [X] finish read me. this is from the first complete... in maintenance/CI mode
 - [X] publish repo
 
 # Project scope and function
@@ -35,7 +37,7 @@ when i reload the page it should load with the last city i searched
 
 
 # Images are below this line
-Mobile updates.
+Mobile updates.\s\s
 ![Favorites and current weather](./Assets/MobileVersion2-1-30-21.JPG)
 
 ![5 Day forecast](./Assets/MobileVersion2-2-1-30-21.JPG)
