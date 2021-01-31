@@ -4,19 +4,22 @@ $(document).ready(function () {//START JS Script after document load and ready--
     function LSAD() {//Load Saved Array Data
         let SavedArrayData = JSON.parse(localStorage.getItem("SavedWorkArray"));
         if ((SavedArrayData !== null)) {//if saved data is NOT emptly load into working array
-            citySearchHistory = SavedArrayData;
-            let lastIndex = citySearchHistory.length - 1;
-            let lastCity = citySearchHistory[lastIndex];
-            console.log(citySearchHistory.length);
-            console.log("lastCity " + lastCity);
-            SearchWeather(lastCity);
-            if (citySearchHistory.length > 0) {
-                $("#StartSearchHistory").html("");
-                for (let i = 0; i < citySearchHistory.length; i++) {
-                    let CurrentSearchHistory = $(`
+            if (SavedArrayData.length !== 0) {
+                citySearchHistory = SavedArrayData;
+                let lastIndex = citySearchHistory.length - 1;
+                let lastCity = citySearchHistory[lastIndex];
+                console.log(citySearchHistory.length);
+                console.log("lastCity " + lastCity);
+                console.log(SavedArrayData);
+                SearchWeather(lastCity);
+                if (citySearchHistory.length > 0) {
+                    $("#StartSearchHistory").html("");
+                    for (let i = 0; i < citySearchHistory.length; i++) {
+                        let CurrentSearchHistory = $(`
                      <ul class="btn block">${citySearchHistory[i]}</ul>
                      `);
-                    $("#StartSearchHistory").append(CurrentSearchHistory);
+                        $("#StartSearchHistory").append(CurrentSearchHistory);
+                    }
                 }
             }
         } else {
@@ -27,6 +30,19 @@ $(document).ready(function () {//START JS Script after document load and ready--
     function SADL() {//Save Array Data Locally
         localStorage.setItem("SavedWorkArray", JSON.stringify(citySearchHistory));
     }
+
+    let input = document.getElementById("searchCityInput");//press enter is the same as clicking artist button
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function (event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            document.getElementById("searchButtonGo").click();//click the artist button when enter is press while in the input box
+        }
+    });
+
 
     $("#searchButtonGo").on("click", function (event) {
         let city = $("#searchCityInput").val().trim();
@@ -77,13 +93,16 @@ $(document).ready(function () {//START JS Script after document load and ready--
 
     function SearchWeather(city) {
         let APIKey = "&appid=82114df2c2bee6b435a6e4366b8f4bdc";
+        let wildCard = "%";
+        let state = "michigan";
         let NumOfDays = "&cnt=5";
         let baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";//Current Weather Call
-        let searchURL = baseURL + city + NumOfDays + APIKey;
+        let searchURL = baseURL + city + "," + state + NumOfDays + APIKey;
         $.ajax({
             url: searchURL,
             method: "GET"
         }).then(function (response) {
+            console.log(response);
             let tempLat = response.coord.lat;
             let tempLon = response.coord.lon;
             let APIKey = "&appid=82114df2c2bee6b435a6e4366b8f4bdc";
