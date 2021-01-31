@@ -15,7 +15,11 @@ I had a great time working on this project and it is perfectly in line with our 
 - [X] build last search item on page load. on page load if local is != null load  last element in array
 - [X] build icons. requires building urls to images on weather webpage and using them as src=
 - [ ] future function, keep track of toggling between search history city and make the last city loaded the one that is loaded when the page is reloaded. not the last one in the array.
-- [ ] future make first letter of multi work citys be capital. currently only the first letter of the first word gets capitalized.
+- [X] future make first letter of multi work citys be capital. currently only the first letter of the first word gets capitalized.
+- [X] switched to zip code search. It returns more accurate location data. Midland Mi returns midland TX no matter what..
+- [ ] Save name of zip code search to favorites. A bigger rewrite because of the way the code is. 
+- [ ] Add min max temp to 5 day forecast
+- [ ] Change 5 day forecast to 7 day forecast
 
 - [X] finish read me
 - [X] publish repo
@@ -31,6 +35,11 @@ when i reload the page it should load with the last city i searched
 
 
 # Images are below this line
+Mobile updates.
+![Favorites and current weather](./Assets/MobileVersion2-1-30-21.JPG)
+
+![5 Day forecast](./Assets/MobileVersion2-2-1-30-21.JPG)
+
 This is the first html content. all hard coded.
 ![First html render](./Assets/FirstHtmlRender.JPG)
 
