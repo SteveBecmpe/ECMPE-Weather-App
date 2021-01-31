@@ -87,6 +87,15 @@ header{
     border-radius: 2px;
 }
 
+button{
+    display: inline-block;
+}
+
+.inputSearch{
+    width: 200px;
+}
+
 aside{
     margin-left: 20px;
+    width: 260px;
 }
