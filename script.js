@@ -95,13 +95,16 @@ $(document).ready(function () {//START JS Script after document load and ready--
         let APIKey = "&appid=82114df2c2bee6b435a6e4366b8f4bdc";
         let wildCard = "%";
         let state = "michigan";
+        let country = "us"
         let NumOfDays = "&cnt=5";
-        let baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";//Current Weather Call
-        let searchURL = baseURL + city + "," + state + NumOfDays + APIKey;
+        // let baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";//Current Weather Call CITY
+        let baseURL = "https://api.openweathermap.org/data/2.5/weather?zip=";//Current Weather Call ZIP CODE
+        let searchURL = baseURL + city + "," + country + NumOfDays + APIKey;
         $.ajax({
             url: searchURL,
             method: "GET"
         }).then(function (response) {
+            console.log("first response");
             console.log(response);
             let tempLat = response.coord.lat;
             let tempLon = response.coord.lon;
