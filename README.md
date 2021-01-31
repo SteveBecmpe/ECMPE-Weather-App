@@ -37,7 +37,7 @@ when i reload the page it should load with the last city i searched
 
 
 # Images are below this line
-Mobile updates.\s\s
+Mobile updates.----------------------------------------------------
 ![Favorites and current weather](./Assets/MobileVersion2-1-30-21.JPG)
 
 ![5 Day forecast](./Assets/MobileVersion2-2-1-30-21.JPG)
