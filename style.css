@@ -92,10 +92,16 @@ button{
 }
 
 .inputSearch{
-    width: 200px;
+    width: 260px;
 }
 
 aside{
     margin-left: 20px;
     width: 260px;
+}
+
+#searchButtonGo {
+    margin: 2px;
+    margin-left: auto;
+    display: block;
 }
